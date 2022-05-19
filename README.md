@@ -1,3 +1,4 @@
-# Auto Follow
+# Nofc Intranet Announcement Space Configurator
 
-Define an automatic following for new or already registered users.
+A humhub module to configure one or more announcement space(s) that require all users to be members & to be notified about all 
+events related to the announcement space(s).
