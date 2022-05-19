@@ -19,7 +19,7 @@ class Module extends \humhub\components\Module
     public function getConfigUrl()
     {
         return Url::to([
-                    '/auto-follow/admin'
+                    '/nofc-intranet-announcement-space-configurator/admin'
         ]);
     }
 

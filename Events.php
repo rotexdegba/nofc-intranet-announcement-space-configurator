@@ -50,7 +50,17 @@ class Events
                 try {
 
                     $container->addMember($user->id, 0, false);
-
+                    
+                    $membership = $container->getMembership($user->id);
+                    
+                    // make sure members of the space can't leave the space
+                    $membership->can_cancel_membership = 0;
+                    
+                    // make sure members of the space always get notifications
+                    $membership->send_notifications = 1;
+                    
+                    $membership->save();
+                    
                 } catch (\Throwable $e) {
                     
                     //TODO: Send notification or email to site Administrator with details
