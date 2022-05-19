@@ -1,14 +1,14 @@
 {
-  "id": "auto-follow",
-  "name": "Auto Follow",
-  "description": "Define an automatic following for new or existing users.",
+  "id": "nofc-intranet-announcement-space-configurator",
+  "name": "Nofc Intranet Announcement Space Configurator",
+  "description": "Configure an announcement space that requires all users to be members & to be notified about all events related to the announcement space.",
   "keywords": [
-    "files"
+    "user", "users", "space", "spaces"
   ],
-  "homepage": "https://github.com/humhub-contrib/auto-follow",
-  "version": "1.0.6",
+  "homepage": "https://github.com/rotexdegba/nofc-intranet-announcement-space-configurator",
+  "version": "1.0.0",
   "humhub": {
-    "minVersion": "1.2"
+    "minVersion": "1.11"
   },
   "screenshots": [
     "resources/Screen1.PNG"

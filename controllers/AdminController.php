@@ -6,9 +6,9 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\autofollow\controllers;
+namespace humhub\modules\nofc\intranet\announcement\space\configurator\controllers;
 
-use humhub\modules\autofollow\models\ConfigureForm;
+use humhub\modules\nofc\intranet\announcement\space\configurator\models\ConfigureForm;
 use Yii;
 
 /**

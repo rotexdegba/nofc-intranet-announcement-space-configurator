@@ -8,17 +8,16 @@ use humhub\modules\user\widgets\UserPickerField;
 
 <div class="panel panel-default">
 
-    <div class="panel-heading"><?php echo Yii::t('AutoFollowModule.base', '<strong>Auto</strong> follow configuration'); ?></div>
+    <div class="panel-heading"><?php echo Yii::t('NofcIntranetAnnouncementSpaceConfiguratorModule.base', '<strong>Nofc</strong> Intranet Announcement Space Configurator configuration'); ?></div>
 
     <div class="panel-body">
         <div class="help-block">
-            <?php echo Yii::t('AutoFollowModule.setting', 'Choose default spaces or users which are automatically followed by new users.'); ?>
+            <?php echo Yii::t('NofcIntranetAnnouncementSpaceConfiguratorModule.setting', 'Choose default spaces which existing and new users are automatically made members of and made to receive all space related notifications.'); ?>
         </div>
 
         <?php $form = ActiveForm::begin(); ?>
         <div class="form-group">
             <?= $form->field($model, 'spaces')->widget(SpacePickerField::class)->label(false); ?>
-            <?= $form->field($model, 'users')->widget(UserPickerField::class, ['placeholderMore' => Yii::t('AutoFollowModule.setting', 'Add User')])->label(false); ?>
             <?= $form->field($model, 'assignAll')->checkbox(); ?>
         </div>
         <div class="form-group">

@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\autofollow;
+namespace humhub\modules\nofc\intranet\announcement\space\configurator;
 
 use Yii;
 use yii\helpers\Url;
@@ -28,31 +28,21 @@ class Module extends \humhub\components\Module
      * 
      * @return \humhub\modules\content\components\ContentContainerActiveRecord[] the automatic followable records
      */
-    public function getAutoFollows()
+    public function getAnnouncementSpacesForUserAutoAddition()
     {
-        $follows = [];
+        $announcementSpaces = [];
 
         $spaces = $this->settings->getSerialized('spaces');
         if ($spaces !== null && is_array($spaces)) {
             foreach ($spaces as $guid) {
                 $s = Space::findOne(['guid' => trim($guid)]);
                 if ($s !== null) {
-                    $follows[] = $s;
+                    $announcementSpaces[] = $s;
                 }
             }
         }
 
-        $users = $this->settings->getSerialized('users');
-        if ($users !== null && is_array($users)) {
-            foreach ($users as $guid) {
-                $u = User::findOne(['guid' => trim($guid)]);
-                if ($u !== null) {
-                    $follows[] = $u;
-                }
-            }
-        }
-
-        return $follows;
+        return $announcementSpaces;
     }
 
 }

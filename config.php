@@ -3,11 +3,14 @@
 use humhub\modules\user\models\User;
 
 return [
-    'id' => 'auto-follow',
-    'class' => 'humhub\modules\autofollow\Module',
-    'namespace' => 'humhub\modules\autofollow',
+    'id' => 'nofc-intranet-announcement-space-configurator',
+    'class' => 'humhub\modules\nofc\intranet\announcement\space\configurator\Module',
+    'namespace' => 'humhub\modules\nofc\intranet\announcement\space\configurator',
     'events' => [
 
-        [User::class, User::EVENT_AFTER_INSERT, ['humhub\modules\autofollow\Events', 'onAfterUserCreate']],
+        [
+                'class' => User::class, 
+                'event' => User::EVENT_AFTER_INSERT, 
+             'callback' => ['humhub\modules\nofc\intranet\announcement\space\configurator\Events', 'onAfterUserCreate']],
     ]
 ];
